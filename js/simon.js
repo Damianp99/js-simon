@@ -28,7 +28,10 @@ const getRandomNum = (num) => {
     }
     return randomNum
 }
+
 const listNumbers = [];
 getRandomNum(listNumbers)
 // console.log((listNumbers));
+
+alert('Questi sono i numeri vincenti : ' + listNumbers)
 
