@@ -38,11 +38,18 @@ alert('Questi sono i numeri vincenti : ' + listNumbers)
 const userNumbers = [];
 
 const timer = setTimeout(() => {
+
     for (let i = 0; userNumbers.length < 5; i++) {
         const winnerNumbers = parseInt(prompt('Inserisci i numeri che ricordi'));
-        userNumbers.push(winnerNumbers)
+        if (isNaN(winnerNumbers) || winnerNumbers > 100) {
+            alert('Inserisci un numero che sia tra 1 e 100')
+        } else {
+            userNumbers.push(winnerNumbers)
+        }
+
+
     }
-    // console.log(userNumbers)
+    console.log(userNumbers)
     const checkNumbers = userNumbers.filter(number => listNumbers.includes(number));
     // console.log(guessedNumbers);
     if (checkNumbers.length < 1) {
