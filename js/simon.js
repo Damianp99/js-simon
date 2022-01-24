@@ -35,3 +35,18 @@ getRandomNum(listNumbers)
 
 alert('Questi sono i numeri vincenti : ' + listNumbers)
 
+const userNumbers = [];
+
+const timer = setTimeout(() => {
+    for (let i = 0; userNumbers.length < 5; i++) {
+        const winnerNumbers = prompt('Inserisci i numeri che ricordi');
+        userNumbers.push(winnerNumbers)
+    }
+    console.log(userNumbers)
+}, 1000);
+
+
+
+
+
+
