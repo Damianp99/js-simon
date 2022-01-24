@@ -41,13 +41,12 @@ const timer = setTimeout(() => {
 
     for (let i = 0; userNumbers.length < 5; i++) {
         const winnerNumbers = parseInt(prompt('Inserisci i numeri che ricordi'));
-        if (isNaN(winnerNumbers) || winnerNumbers > 100) {
+        // validazione per i numeri inseriti dall'utente
+        if (isNaN(winnerNumbers) || winnerNumbers > 100 || winnerNumbers <= 0) {
             alert('Inserisci un numero che sia tra 1 e 100')
         } else {
             userNumbers.push(winnerNumbers)
         }
-
-
     }
     console.log(userNumbers)
     const checkNumbers = userNumbers.filter(number => listNumbers.includes(number));
