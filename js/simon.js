@@ -39,11 +39,21 @@ const userNumbers = [];
 
 const timer = setTimeout(() => {
     for (let i = 0; userNumbers.length < 5; i++) {
-        const winnerNumbers = prompt('Inserisci i numeri che ricordi');
+        const winnerNumbers = parseInt(prompt('Inserisci i numeri che ricordi'));
         userNumbers.push(winnerNumbers)
     }
-    console.log(userNumbers)
+    // console.log(userNumbers)
+    const checkNumbers = userNumbers.filter(number => listNumbers.includes(number));
+    // console.log(guessedNumbers);
+    if (checkNumbers.length < 1) {
+        alert('Non hai indovinato neanche un numero RIPROVA!')
+
+    } else alert(`Hai indovinato ${checkNumbers} BRAVO!`)
+
 }, 1000);
+// da cambiare poi in 30000
+
+// 
 
 
 
