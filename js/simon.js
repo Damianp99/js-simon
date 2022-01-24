@@ -18,3 +18,17 @@ Consigli del giorno:
     5-Verificare quanti numeri coincidono
 */
 
+
+// Funzione randomica per i numeri
+const getRandomNum = (num) => {
+    for (let i = 0; i < 5; i++) {
+        randomNum = Math.floor(Math.random() * 100 + 1)
+        num.push(randomNum)
+        // console.log(randomNum);
+    }
+    return randomNum
+}
+const listNumbers = [];
+getRandomNum(listNumbers)
+// console.log((listNumbers));
+
